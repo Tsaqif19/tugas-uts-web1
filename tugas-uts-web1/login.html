@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masuk | Lentera Buku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="login-halaman">
+  <aside class="login-sisi">
+    <div class="rak" aria-hidden="true"><i style="height:110px;background:#0F766E"></i><i style="height:140px;background:#FFD23F"></i><i style="height:95px;background:#9A3412"></i><i style="height:130px;background:#5B21B6"></i><i style="height:120px;background:#0369A1"></i></div>
+    <h1>Buku yang kamu cari ada di sini.</h1>
+    <p>Pesan buku teknologi, cek stok, dan lacak kiriman dalam satu tempat.</p>
+  </aside>
+  <main class="login-form">
+    <form id="formLogin" novalidate>
+      <h2>Masuk ke akun</h2>
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="username" placeholder="nama@email.com">
+      <p class="pesan-error" id="err-email"></p>
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password">
+      <p class="pesan-error" id="err-password"></p>
+      <div class="aksi"><button class="btn" type="submit">Login</button>
+        <button class="btn garis" type="button" id="btnLupa">Lupa Password</button>
+        <button class="btn garis" type="button" id="btnDaftar">Daftar</button></div>
+      <p class="demo">Akun contoh: <strong>rina@gmail.com</strong> / <strong>rina123</strong></p>
+    </form>
+  </main>
+</div>
+
+<dialog id="modalLupa" aria-labelledby="jLupa">
+  <form id="formLupa" novalidate>
+    <h2 id="jLupa">Lupa password</h2>
+    <p>Masukkan email akun Anda. Kami kirim tautan untuk membuat password baru.</p>
+    <label for="emailLupa">Email</label>
+    <input id="emailLupa" type="email">
+    <p class="pesan-error" id="err-emailLupa"></p>
+    <div class="aksi"><button class="btn" type="submit">Kirim tautan reset</button><button class="btn garis" type="button" data-tutup>Batal</button></div>
+  </form>
+</dialog>
+
+<dialog id="modalDaftar" aria-labelledby="jDaftar">
+  <form id="formDaftar" novalidate>
+    <h2 id="jDaftar">Buat akun baru</h2>
+    <label for="namaDaftar">Nama lengkap</label><input id="namaDaftar" type="text" autocomplete="name"><p class="pesan-error" id="err-namaDaftar"></p>
+    <label for="emailDaftar">Email</label><input id="emailDaftar" type="email" autocomplete="email"><p class="pesan-error" id="err-emailDaftar"></p>
+    <label for="passDaftar">Password</label><input id="passDaftar" type="password" autocomplete="new-password"><p class="pesan-error" id="err-passDaftar"></p>
+    <label for="passKonfirm">Ulangi password</label><input id="passKonfirm" type="password" autocomplete="new-password"><p class="pesan-error" id="err-passKonfirm"></p>
+    <div class="aksi"><button class="btn" type="submit">Daftar</button><button class="btn garis" type="button" data-tutup>Batal</button></div>
+  </form>
+</dialog>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

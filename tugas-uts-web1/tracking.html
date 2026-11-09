@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracking Pengiriman | Lentera Buku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="merek" href="dashboard.html"><img src="assets/logo.png" alt="">Lentera Buku</a>
+  <nav aria-label="Menu utama"><a href="dashboard.html">Dashboard</a><a href="stok.html">Stok</a><a href="checkout.html">Pemesanan</a><a href="tracking.html" aria-current="page">Tracking</a><a href="laporan.html">Laporan</a><a href="history.html">Riwayat</a><button type="button" id="keluar">Keluar</button></nav>
+</header>
+<main>
+<h1>Tracking Pengiriman</h1>
+<p class="lead">Masukkan Nomor Delivery Order untuk melihat status kiriman. Contoh: 20230012 atau 20230013.</p>
+<section class="panel"><form id="formCari" novalidate>
+<label for="noDO">Nomor Delivery Order</label><input id="noDO" autocomplete="off" inputmode="numeric" placeholder="20230012"><p class="pesan-error" id="err-noDO"></p>
+<div class="aksi"><button class="btn" type="submit">Cari</button></div></form></section>
+<div id="hasil"></div>
+</main>
+<footer><p>Lentera Buku &middot; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/tracking.js"></script>
+</body>
+</html>

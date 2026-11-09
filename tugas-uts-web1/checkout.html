@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pemesanan | Lentera Buku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="merek" href="dashboard.html"><img src="assets/logo.png" alt="">Lentera Buku</a>
+  <nav aria-label="Menu utama"><a href="dashboard.html">Dashboard</a><a href="stok.html">Stok</a><a href="checkout.html" aria-current="page">Pemesanan</a><a href="tracking.html">Tracking</a><a href="laporan.html">Laporan</a><a href="history.html">Riwayat</a><button type="button" id="keluar">Keluar</button></nav>
+</header>
+<main>
+<h1>Pemesanan Buku</h1>
+<p class="lead">Pilih buku, atur jumlahnya, lalu isi data pemesan dan pembayaran.</p>
+<section class="panel"><h2>Keranjang</h2>
+<form id="formTambah" novalidate><div class="baris">
+ <div><label for="pilihBuku">Buku</label><select id="pilihBuku"><option value="">Pilih buku...</option></select><p class="pesan-error" id="err-pilihBuku"></p></div>
+ <div><label for="jumlah">Jumlah</label><input id="jumlah" type="number" min="1" value="1"><p class="pesan-error" id="err-jumlah"></p></div>
+</div><div class="aksi"><button class="btn kuning" type="submit">Tambah ke keranjang</button></div></form>
+<div class="tabel-wrap" style="margin-top:20px"><table>
+<caption class="sr-only">Daftar buku yang dipesan</caption>
+<thead><tr><th scope="col">Judul</th><th scope="col" class="angka">Harga</th><th scope="col">Jumlah</th><th scope="col" class="angka">Subtotal</th><th scope="col">Aksi</th></tr></thead>
+<tbody id="isiKeranjang"></tbody>
+<tfoot><tr><td colspan="3">Total bayar</td><td class="angka" id="totalBayar">Rp 0</td><td></td></tr></tfoot></table></div>
+<p class="kosong" id="kosongKeranjang">Keranjang masih kosong. Pilih buku di atas untuk memulai.</p></section>
+<section class="panel"><h2>Data pemesan dan pembayaran</h2>
+<form id="formPesan" novalidate>
+ <div class="baris">
+  <div><label for="nama">Nama pemesan</label><input id="nama" autocomplete="name"><p class="pesan-error" id="err-nama"></p></div>
+  <div><label for="telp">Nomor telepon</label><input id="telp" inputmode="numeric" autocomplete="tel" placeholder="081234567890"><p class="pesan-error" id="err-telp"></p></div>
+ </div>
+ <label for="alamat">Alamat pengiriman</label><textarea id="alamat" rows="3" autocomplete="street-address"></textarea><p class="pesan-error" id="err-alamat"></p>
+ <div class="baris">
+  <div><label for="ekspedisi">Ekspedisi</label><select id="ekspedisi"><option value="">Pilih ekspedisi...</option><option>JNE Reguler</option><option>SiCepat Halu</option><option>J&amp;T Express</option></select><p class="pesan-error" id="err-ekspedisi"></p></div>
+  <div><label for="metode">Metode pembayaran</label><select id="metode"><option value="">Pilih metode...</option><option>Transfer Bank</option><option>E-Wallet</option><option>COD</option></select><p class="pesan-error" id="err-metode"></p></div>
+ </div>
+ <div class="aksi"><button class="btn" type="submit">Buat pesanan</button></div>
+</form></section>
+<dialog id="modalSukses" aria-labelledby="jSukses"><h2 id="jSukses">Pesanan berhasil dibuat</h2>
+<p>Nomor Delivery Order: <strong id="noDOBaru"></strong><br>Total pembayaran: <strong id="totalBaru"></strong></p>
+<div class="aksi"><a class="btn kuning" id="linkLacak" href="tracking.html">Lacak pesanan</a><button class="btn garis" type="button" id="tutupSukses">Tutup</button></div></dialog>
+</main>
+<footer><p>Lentera Buku &middot; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

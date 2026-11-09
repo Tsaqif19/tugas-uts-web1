@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan Pemesanan | Lentera Buku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="merek" href="dashboard.html"><img src="assets/logo.png" alt="">Lentera Buku</a>
+  <nav aria-label="Menu utama"><a href="dashboard.html">Dashboard</a><a href="stok.html">Stok</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a href="laporan.html" aria-current="page">Laporan</a><a href="history.html">Riwayat</a><button type="button" id="keluar">Keluar</button></nav>
+</header>
+<main>
+<h1>Laporan Pemesanan</h1>
+<p class="lead">Ringkasan dari pesanan yang tercatat, termasuk pesanan yang Anda buat sendiri.</p>
+<div class="ringkas"><div><strong id="jmlPesanan">0</strong>pesanan</div><div><strong id="jmlPendapatan">Rp 0</strong>total pembayaran</div><div><strong id="nilaiStok">Rp 0</strong>nilai persediaan</div></div>
+<section class="panel"><div class="tabel-wrap"><table><caption>Pesanan per ekspedisi</caption>
+<thead><tr><th scope="col">Ekspedisi</th><th scope="col" class="angka">Jumlah pesanan</th><th scope="col" class="angka">Total pembayaran</th></tr></thead><tbody id="isiEkspedisi"></tbody></table></div></section>
+<section class="panel"><div class="tabel-wrap"><table><caption>Buku yang dipesan lewat halaman Pemesanan</caption>
+<thead><tr><th scope="col">Nama buku</th><th scope="col" class="angka">Jumlah dipesan</th><th scope="col" class="angka">Nilai</th></tr></thead><tbody id="isiLaporan"></tbody></table></div>
+<p class="kosong" id="kosongLaporan" hidden>Belum ada pesanan baru. Buat pesanan di halaman Pemesanan agar muncul di sini.</p></section>
+</main>
+<footer><p>Lentera Buku &middot; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/laporan.js"></script>
+</body>
+</html>

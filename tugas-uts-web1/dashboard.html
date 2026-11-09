@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Lentera Buku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="merek" href="dashboard.html"><img src="assets/logo.png" alt="">Lentera Buku</a>
+  <nav aria-label="Menu utama"><a href="dashboard.html" aria-current="page">Dashboard</a><a href="stok.html">Stok</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a href="laporan.html">Laporan</a><a href="history.html">Riwayat</a><button type="button" id="keluar">Keluar</button></nav>
+</header>
+<main>
+<section class="salam">
+  <h1 id="salam">Selamat datang</h1>
+  <p class="lead"><span id="jam"></span> &middot; Peran: <strong id="peran"></strong></p>
+</section>
+<nav aria-label="Menu dashboard"><div class="rak-menu">
+  <a class="buku-menu" href="stok.html"><h2>Informasi Stok / Katalog</h2><span>Lihat dan tambah stok buku</span></a>
+  <a class="buku-menu" href="tracking.html"><h2>Tracking Pengiriman</h2><span>Cari status dengan nomor DO</span></a>
+  <a class="buku-menu" href="laporan.html"><h2>Laporan Pemesanan</h2><span>Ringkasan penjualan per judul</span></a>
+  <a class="buku-menu" href="history.html"><h2>History Transaksi</h2><span>Daftar semua pesanan</span></a>
+</div></nav>
+<p class="lead" style="margin-top:28px">Ingin memesan buku? <a href="checkout.html">Buka halaman pemesanan</a>.</p>
+</main>
+<footer><p>Lentera Buku &middot; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

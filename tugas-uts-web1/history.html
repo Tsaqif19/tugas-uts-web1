@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History Transaksi | Lentera Buku</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="merek" href="dashboard.html"><img src="assets/logo.png" alt="">Lentera Buku</a>
+  <nav aria-label="Menu utama"><a href="dashboard.html">Dashboard</a><a href="stok.html">Stok</a><a href="checkout.html">Pemesanan</a><a href="tracking.html">Tracking</a><a href="laporan.html">Laporan</a><a href="history.html" aria-current="page">Riwayat</a><button type="button" id="keluar">Keluar</button></nav>
+</header>
+<main>
+<h1>History Transaksi</h1>
+<p class="lead">Pesanan terbaru tampil paling atas.</p>
+<section class="panel"><div class="tabel-wrap"><table><caption class="sr-only">Riwayat transaksi</caption>
+<thead><tr><th scope="col">No. DO</th><th scope="col">Tanggal</th><th scope="col">Pemesan</th><th scope="col">Buku</th><th scope="col">Pembayaran</th><th scope="col" class="angka">Total</th><th scope="col">Lacak</th></tr></thead><tbody id="isiRiwayat"></tbody></table></div>
+<p class="kosong" id="kosongRiwayat" hidden>Belum ada transaksi. Buat pesanan pertama di halaman Pemesanan.</p></section>
+</main>
+<footer><p>Lentera Buku &middot; Tugas UTS Pemrograman Web 1</p></footer>
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+<script src="js/history.js"></script>
+</body>
+</html>
